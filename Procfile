@@ -1,1 +1,1 @@
-web: gunicorn kiwi.wsgi --log-file= -
+web: gunicorn kiwi.wsgi --log-file=-
