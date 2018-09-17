@@ -18,7 +18,8 @@ class CurrencyConverter:
                 CurrencyConverter.error_message("Invalid input. Check arguments!"))
 
         input_currency = CurrencyConverter.resolve_symbol(input_currency)
-        output_currency = CurrencyConverter.resolve_symbol(output_currency)
+        if output_currency:
+            output_currency = CurrencyConverter.resolve_symbol(output_currency)
 
         output = CurrencyConverter.prepare_output(amount, input_currency, output_currency)
 
@@ -62,9 +63,9 @@ class CurrencyConverter:
 
     @staticmethod
     def resolve_symbol(currency):
-        if currency and len(currency) == 1:
+        if len(currency) == 1:
             currency = CurrencyConverter.currency_symbols[currency]
-        return currency.upper()
+        return currency
 
     @staticmethod
     def error_message(message):
