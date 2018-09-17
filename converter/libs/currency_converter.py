@@ -64,7 +64,7 @@ class CurrencyConverter:
     def resolve_symbol(currency):
         if currency and len(currency) == 1:
             currency = CurrencyConverter.currency_symbols[currency]
-        return currency
+        return currency.upper()
 
     @staticmethod
     def error_message(message):
