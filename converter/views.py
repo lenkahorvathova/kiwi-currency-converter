@@ -15,6 +15,10 @@ def index(request):
                 return JsonResponse(
                     CurrencyConverter.error_message('Amount "%s" is an invalid float value.' % amount),
                     status=400)
+        else:
+            return JsonResponse(
+                CurrencyConverter.error_message('Amount is missing.'),
+                status=400)
 
         result = CurrencyConverter.convert(amount, input_currency, output_currency)
 
