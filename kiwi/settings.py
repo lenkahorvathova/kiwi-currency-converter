@@ -25,7 +25,7 @@ SECRET_KEY = '9uy_8t7(h41poeb8+p2y^%5v5(&xrk55o_^^*qgdxca3k=)v$='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'horvathova-kiwi-task.herokuapp.com']
 
 
 # Application definition
